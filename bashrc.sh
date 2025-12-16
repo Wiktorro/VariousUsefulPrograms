@@ -16,7 +16,8 @@
 #
 
 #
-fbLinkRepair() { ; }  # TODO 
-goworkLinkRepair() { ; }  # TODO , by sprzatnac ,usun take regexy :: <.*>|\{.*\}
+fbLinkRepair() { ; } # TODO
+goworkLinkRepair() { curl -kq "$1" | grep --invert-match -E '<.*>|\{.*\}' ; }
 readbabylonbee() { curl -q "$1" | grep '<p>' ; }
 #
+
