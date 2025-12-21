@@ -4,7 +4,7 @@
 #
 
 #
-
+echo "calling $(pwd)/bashrc"
 #
 
 #
