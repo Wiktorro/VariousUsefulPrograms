@@ -2,7 +2,8 @@
 #
 
 #
-
+[core]
+	editor = nano -c
 #
 
 #
