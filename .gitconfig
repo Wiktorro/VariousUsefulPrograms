@@ -6,4 +6,9 @@
 #
 
 #
-
+[help]
+	autocorrect = 30  ## 3 seconds before correction runs
+[protocol]
+	version = 2
+[pull]
+	rebase = true
