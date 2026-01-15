@@ -5,5 +5,11 @@
 
 #
 
+[fetch]
+       pruneTags = true
+       output = compact
+[gc]
+       auto = 6000 ## by default 6700
+
 #
 
