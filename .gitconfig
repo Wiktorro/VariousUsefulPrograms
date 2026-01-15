@@ -3,6 +3,8 @@
 
 #
 
+alias adbrunroot=' adb devices && adb root && adb shell ' ##  use like 'ip -a netns'  when you want to run command and close 
+alias adbpointToEmulator='  export ANDROID_SERIAL=emulator-5554 ; echo ANDROID_SERIAL=$ANDROID_SERIAL '  ## better use '  adbFindDevice emu '
 #
 
 #
