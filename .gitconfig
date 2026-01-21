@@ -5,6 +5,9 @@
 
 #
 
+[diff]
+	tool = meld # or maybe vs code
+	context = 4
 [fetch]
        pruneTags = true
        output = compact
