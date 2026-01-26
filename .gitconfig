@@ -1,0 +1,21 @@
+
+#
+
+#
+[credential]
+	komentarz = "ciekawe lini o .netrc pod https://stackoverflow.com/questions/6031214/git-how-to-use-netrc-file-on-windows-to-save-user-and-password "
+	helper = cache --timeout=267840
+
+#
+
+[diff]
+	tool = meld # or maybe vs code
+	context = 4
+[fetch]
+       pruneTags = true
+       output = compact
+[gc]
+       auto = 6000 ## by default 6700
+
+#
+
