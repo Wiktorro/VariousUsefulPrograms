@@ -6,6 +6,8 @@
 
 
 #
+	tagFind = ! git tag --list | grep
+	tagShow = "! git show $( git tagFind $@ ) "
 
 #
 [credential]
