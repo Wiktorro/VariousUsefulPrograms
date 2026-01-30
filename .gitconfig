@@ -1,6 +1,8 @@
 [alias]
 	diffprev = diff HEAD^
 #
+	resetPrev = reset --quiet --hard HEAD^
+	resetCurr = reset --quiet --hard HEAD
 
 #
 
