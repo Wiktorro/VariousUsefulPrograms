@@ -54,5 +54,6 @@ fi
 #
 
 #
-
+# tool from https://stackoverflow.com/a/25620599 and https://gist.github.com/deryni/8aa8d0164f620a8dcb7e 
+tmp=~/worddiff.awk ; [[ -f "${tmp}" ]] || curl -o "${tmp}" "https://gist.githubusercontent.com/deryni/8aa8d0164f620a8dcb7e/raw/06f2eed69a8f9df0e38882a2e6156e4e60bf4a98/worddiff.awk"
 #
