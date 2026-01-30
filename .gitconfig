@@ -8,6 +8,8 @@
 #
 
 #
+	showCurr = show HEAD --ignore-cr-at-eol
+	showPrev = show HEAD^ --ignore-cr-at-eol
 [credential]
 	komentarz = "ciekawe lini o .netrc pod https://stackoverflow.com/questions/6031214/git-how-to-use-netrc-file-on-windows-to-save-user-and-password "
 	helper = cache --timeout=267840
