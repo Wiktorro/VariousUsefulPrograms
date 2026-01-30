@@ -3,6 +3,9 @@
 #
 
 #
+	fetchMaster = fetch origin main
+	log1line = log --oneline -n3
+	stl = !git status --short --no-ahead-behind --show-stash && git log1line
 
 
 #
