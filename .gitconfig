@@ -1,9 +1,40 @@
+[advice]
+	skippedCherryPicks = false ## for messages like "hint: use --reapply-cherry-picks to include skipped commits" after git pull
+	detachedHead = true
+[alias]
+	diffprev = diff HEAD^
+#
+	resetPrev = reset --quiet --hard HEAD^
+	resetCurr = reset --quiet --hard HEAD
+
+#
+	fetchMaster = fetch origin main
+	log1line = log --oneline -n3
+	stl = !git status --short --no-ahead-behind --show-stash && git log1line
+
 
 #
 
 #
+[credential]
+	komentarz = "ciekawe lini o .netrc pod https://stackoverflow.com/questions/6031214/git-how-to-use-netrc-file-on-windows-to-save-user-and-password "
+	helper = cache --timeout=267840
 
 #
 
-#
+[diff]
+	tool = meld # or maybe vs code
+	context = 4
+[fetch]
+       pruneTags = true
+       output = compact
+[gc]
+       auto = 6000 ## by default 6700
 
+#
+[help]
+	autocorrect = 30  ## 3 seconds before correction runs
+[protocol]
+	version = 2
+[pull]
+	rebase = true
