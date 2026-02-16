@@ -35,6 +35,15 @@ declare -rx VISUAL=${EDITOR} ED=${EDITOR} HISTFILESIZE=9999  HISTSIZE=9999 HISTC
 #
 
 #
+if which --all docker &> /dev/null ; then
+true;
+fi
+
+#
+
+#
+
+#
 
 #
 
