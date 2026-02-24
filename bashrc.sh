@@ -77,6 +77,8 @@ alias bashreload='source $HOME/.bashrc '
 alias historyedit='nano ~/.bash_history '
 
 #
+alias lah='ls -lhA'
+alias lahalt='ls -hAlt' # l - long, print details , t - sort by time , h - human readable, A - almost all, show hidden, r - reverse order, WATCH OUT FOR RISKY TYPO!! linux.die.net/man/8/hal
 
 #
 
