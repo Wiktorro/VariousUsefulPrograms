@@ -69,6 +69,7 @@ fi
 
 #
 
+alias cdback='cd "${OLDPWD}" ' ..=" cd .." ...=" cd ../.." ....=" cd ../../.." # mind the "" if path has spaces
 #
 
 #
