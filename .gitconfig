@@ -33,6 +33,8 @@
 [gc]
        auto = 6000 ## by default 6700
 
+[includeIf "hasconfig:remote.*.url:*r7.krakow.*/**"] # see https://git-scm.com/docs/git-config#Documentation/git-config.txt-includeIfconditionpath
+	path =  ~/.gitconfigR7
 #
 [help]
 	autocorrect = 30  ## 3 seconds before correction runs
