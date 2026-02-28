@@ -89,6 +89,7 @@ alias lahalt='ls -hAlt' # l - long, print details , t - sort by time , h - human
 #
 
 #
+alias killJobsBackground='kill $(jobs -p) ; echo " if not efective, keep using fg-and-Ctrl+C till ends na jobs returns nothing  " ' ## use when 'exit' sayss 'There are stopped  jobs'
 
 #
 
