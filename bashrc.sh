@@ -123,6 +123,7 @@ highlight() {  ##  uname -n | highlight tek 2
 
 #
 
+datepretty() { date +%F-%R ; } # +%y-%b-%d-%R
 #
 
 #
