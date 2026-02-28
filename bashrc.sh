@@ -116,7 +116,7 @@ highlight() {  ##  uname -n | highlight tek 2
   sed -f <(printf '%s\n' "${patterns[@]}")
 } 
 #
-
+psmine() { ps --full --user "$(whoami)" ; } # vxajhq, czasem ustawione jest $USER a czasem $USERNAME
 #
 
 #
