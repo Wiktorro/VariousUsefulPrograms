@@ -96,6 +96,9 @@ alias lahalt='ls -hAlt' # l - long, print details , t - sort by time , h - human
 
 #
 
+titleSet() {
+echo -en "\033]0;$1\a"  ### like echo -en "\033]0;New title\a" ## better Use printf, echo isn't portable in the regard.  ,as in https://unix.stackexchange.com/q/70459
+} ##{ echo "[ $1 ]" }
 
 # from https://stackoverflow.com/a/60443899 ## use llike ::  noisy_command | highlight ERROR WARN
 # Adds ANSI colors to matched terms, similar to grep --color but without
