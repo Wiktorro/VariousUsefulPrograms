@@ -1,9 +1,42 @@
+[advice]
+	skippedCherryPicks = false ## for messages like "hint: use --reapply-cherry-picks to include skipped commits" after git pull
+	detachedHead = true
+[alias]
+	diffCurr = diff --ignore-cr-at-eol --unified=5 HEAD
+	diffPrev = diff --ignore-cr-at-eol --unified=5 HEAD^  ## showing to 5 lines on shared context ##  diff HEAD^ -M30% (aka --find-renames=30% , istnijees tez --find-copies=30% ) powinno uznawac za move / rename jesli co najmnije 30% wspolnej zawartosci
+#
+	diffMinimal = "! git diff --ignore-cr-at-eol --word-diff-regex='([^[:alnum:]]|[^[:space:]])' --word-diff=porcelain HEAD | awk -v red="$(tput setaf 1)" -v green="$(tput setaf 2)" -v reset="$(tput sgr0)" -f ~/worddiff.awk ##"
+	resetPrev = reset --quiet --hard HEAD^
+	resetCurr = reset --quiet --hard HEAD
+
+#
+	fetchMaster = fetch origin main
+	log1line = log --oneline -n3
+	stl = !git status --short --no-ahead-behind --show-stash && git log1line
+
 
 #
 
 #
+[credential]
+	komentarz = "ciekawe lini o .netrc pod https://stackoverflow.com/questions/6031214/git-how-to-use-netrc-file-on-windows-to-save-user-and-password "
+	helper = cache --timeout=267840
 
 #
 
-#
+[diff]
+	tool = meld # or maybe vs code
+	context = 4
+[fetch]
+       pruneTags = true
+       output = compact
+[gc]
+       auto = 6000 ## by default 6700
 
+#
+[help]
+	autocorrect = 30  ## 3 seconds before correction runs
+[protocol]
+	version = 2
+[pull]
+	rebase = true
