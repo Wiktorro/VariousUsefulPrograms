@@ -74,7 +74,7 @@ alias historydeletelastprev=' history -d -2 '
 
 #
 
-alias cdback='cd "${OLDPWD}" ' ..=" cd .." ...=" cd ../.." ....=" cd ../../.." # mind the "" if path has spaces
+alias cdback='cd "${OLDPWD}" ' ..=" cd .." ...=" cd ../.." ....=" cd ../../.."  pwdprevious='echo "${OLDPWD}" ' # mind the "" if path has spaces
 #
 
 #
