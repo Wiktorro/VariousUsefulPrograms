@@ -64,6 +64,8 @@ fi
 #
 
 #
+stty -ixon ## allows to search in 2 directions whit CTRL+R  - normal CTRL+R to search backward and CTRL+S to search FORWARD - ifa good command was skipped with CTRL+R , see also https://unix.stackexchange.com/questions/394362/whats-the-shortcut-to-delete-a-word-forward-in-a-unix-terminal or https://unix.stackexchange.com/questions/10806/how-to-change-previous-next-word-shortcut-in-bash 
+## also write beginning and press PAGEUP / PAGEDOWN to scroll other command with same beginning , file : /etc/inputrc ## good tips at https://unix.stackexchange.com/a/394373
 alias historyclear=' history -c ; history '
 alias historylast=' history 11 '
 alias historyreload=' history -c ; history -r' # clears messy hist from terminal, reads fresh from default histfile
