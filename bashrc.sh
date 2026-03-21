@@ -158,6 +158,7 @@ true
 fi
 
 if which --all python &> /dev/null  ;  then
+false || complete -W " --check-hash-based-pycs --help --help-all --help-env --help-xoptions -B -E -I -O -OO -P -S -V -W -X -b -c -d -h -i -m -q -s -u -v -x " python # -o nospace -f
 true
 fi
 #
