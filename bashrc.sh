@@ -157,6 +157,7 @@ if which --all picocom &> /dev/null  ;  then
 true
 fi
 
+# which python3 --all &> /dev/null || alias python3=python # python -V
 if which --all python &> /dev/null  ;  then
 true
 fi
