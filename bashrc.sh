@@ -135,6 +135,9 @@ readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@"
 
 #
 
+if which --all keep-presence &> /dev/null ; then
+true
+fi
 #
 
 if which --all repo &> /dev/null  ;  then
