@@ -150,6 +150,7 @@ fi
 
 #
 if which --all pcat &> /dev/null ; then
+alias pcatdevices='  pcat -DEVICES'
 true
 fi
 
