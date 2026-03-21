@@ -159,6 +159,7 @@ fi
 
 if which --all python &> /dev/null  ;  then
 true
+pipinstall() { python -m pip install -U $@ ; }
 fi
 #
 
