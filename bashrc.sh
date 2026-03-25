@@ -146,6 +146,9 @@ fi
 
 #
 
+if which --all gnome-text-editor &> /dev/null  ;  then
+true
+fi
 #
 
 #
