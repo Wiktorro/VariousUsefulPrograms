@@ -71,6 +71,7 @@ alias historylast=' history 11 '
 alias historyreload=' history -c ; history -r' # clears messy hist from terminal, reads fresh from default histfile
 alias historydeletelast=' history -d -1 ' # supported also -d start-end, from X till end like :: -d 144--1
 alias historydeletelastprev=' history -d -2 '
+historydeletelastfrom() { history -d $1--1 ; }
 
 #
 
