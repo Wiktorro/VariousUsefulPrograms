@@ -166,5 +166,7 @@ fi
 
 #
 # tool from https://stackoverflow.com/a/25620599 and https://gist.github.com/deryni/8aa8d0164f620a8dcb7e 
-tmp=~/worddiff.awk ; [[ -f "${tmp}" ]] || curl -o "${tmp}" "https://gist.githubusercontent.com/deryni/8aa8d0164f620a8dcb7e/raw/06f2eed69a8f9df0e38882a2e6156e4e60bf4a98/worddiff.awk"
+# declare -A user_data=( [id]="101" [name]="Jan" [role]="admin" ); for key in "${!user_data[@]}"; do echo "$key => ${user_data[$key]}"; done
+declare -A tmpArr=( ["$HOME/worddiff.awk"]="https://gist.githubusercontent.com/deryni/8aa8d0164f620a8dcb7e/raw/06f2eed69a8f9df0e38882a2e6156e4e60bf4a98/worddiff.awk" ) # nie radzi sobie z ~
+for tmp in "${!tmpArr[@]}"; do [[ -f "${tmp}" ]] || curl -o "${tmp}" "${tmpArr[$tmp]}" ; done #  echo "$tmp => ${tmpArr[$tmp]}"; && echo "${tmp} exists" 
 #
