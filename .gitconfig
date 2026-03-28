@@ -19,6 +19,9 @@
 #
 
 #
+[clean]
+	komentarz  = "when changed to false , plain git clean will remove files without extra force flags"
+	requireForce = true
 [core]
 [credential]
 	komentarz = "ciekawe lini o .netrc pod https://stackoverflow.com/questions/6031214/git-how-to-use-netrc-file-on-windows-to-save-user-and-password "
