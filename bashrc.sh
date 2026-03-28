@@ -77,8 +77,11 @@ alias historydeletelastprev=' history -d -2 '
 #
 
 alias cdback='cd "${OLDPWD}" ' ..=" cd .." ...=" cd ../.." ....=" cd ../../.." # mind the "" if path has spaces
+tmp=~/source
+if [[ -d $tmp ]]  ;  then
+true
+fi
 #
-
 #
 alias bashedit='nano $HOME/.bashrc '
 alias bashreload='source $HOME/.bashrc '
