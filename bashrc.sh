@@ -152,6 +152,16 @@ fi
 #
 
 if which --all gnome-text-editor &> /dev/null  ;  then
+gnomeSetPrefs() {
+printf \
+'<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="text/x-ini">
+    <glob pattern="*.cfg"/>
+  </mime-type>
+</mime-info>' > ~/.local/share/mime/packages/cfg-as-ini.xml
+update-mime-database ~/.local/share/mime
+}
 true
 fi
 #
