@@ -153,6 +153,7 @@ fi
 
 if which --all gnome-text-editor &> /dev/null  ;  then
 true
+complete -F _minimal -W "-h --help --help-all --help-gapplication -i --ignore-session -n --new-window -s --standalone --version" gnome-text-editor
 fi
 #
 
