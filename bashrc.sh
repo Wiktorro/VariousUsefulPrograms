@@ -140,6 +140,10 @@ readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@"
 if which --all repo &> /dev/null  ;  then
 true
 fi
+
+if which --all rg &> /dev/null  ;  then
+true
+fi
 #
 
 #
