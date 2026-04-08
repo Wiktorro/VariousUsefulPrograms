@@ -87,7 +87,7 @@ alias historyedit='nano ~/.bash_history '
 #
 alias lah='ls -lhA'
 alias lahalt='ls -hAlt' # l - long, print details , t - sort by time , h - human readable, A - almost all, show hidden, r - reverse order, WATCH OUT FOR RISKY TYPO!! linux.die.net/man/8/hal
-
+alias lss='ls -lhAS' # sort by size, biggest first, show hidden files, but not . and .. , ls -lS - sort by size, biggest first, but not show hidden files
 #
 
 #
