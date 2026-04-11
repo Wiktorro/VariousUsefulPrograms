@@ -183,6 +183,10 @@ fi
 if which --all python &> /dev/null  ;  then
 true
 fi
+
+if which --all qpm-cli &> /dev/null  ;  then
+true
+fi
 #
 
 #
