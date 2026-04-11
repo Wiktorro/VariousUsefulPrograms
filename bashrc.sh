@@ -168,6 +168,7 @@ fi
 
 if which --all keep-presence &> /dev/null ; then
 true
+alias keepPresKill='kill $keepPresProc ; keepPresProc=0 ; echo $keepPresProc'
 fi
 #
 
