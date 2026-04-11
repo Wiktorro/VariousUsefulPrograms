@@ -150,6 +150,10 @@ fi
 
 #
 
+if which --all dotnet &> /dev/null ; then
+true
+fi
+
 if which --all gnome-text-editor &> /dev/null  ;  then
 gnomeSetPrefs() {
 printf \
