@@ -13,6 +13,7 @@
 	diffSmall = "! git diff --ignore-cr-at-eol --word-diff=porcelain HEAD | awk -v red="$(tput setaf 1)" -v green="$(tput setaf 2)" -v reset="$(tput sgr0)" -f ~/worddiff.awk ## "
 	fetchMaster = fetch origin main
 	log1line = log --oneline -n3
+	pushQuiet = !git push -q --set-upstream | sed -e 's/^remote: //' | grep .
 	stl = !git status --short --no-ahead-behind --show-stash && git log1line
 
 
