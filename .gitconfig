@@ -1,4 +1,3 @@
-
 [advice]
 	skippedCherryPicks = false ## for messages like "hint: use --reapply-cherry-picks to include skipped commits" after git pull
 	detachedHead = true
