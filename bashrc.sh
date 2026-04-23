@@ -95,6 +95,7 @@ alias lahalt='ls -hAlt' # l - long, print details , t - sort by time , h - human
 #
 
 #
+complete -j -P '"%' -S '"' disown
 filesort() { sort --unique --output="$1" "$1" ; }
 
 #
