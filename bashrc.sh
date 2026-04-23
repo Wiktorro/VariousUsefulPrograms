@@ -93,7 +93,7 @@ alias lahalt='ls -hAlt' # l - long, print details , t - sort by time , h - human
 #
 
 #
-
+complete -A stopped -P '"%' -S '"' bg
 #
 filesort() { sort --unique --output="$1" "$1" ; }
 
