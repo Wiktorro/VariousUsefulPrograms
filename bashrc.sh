@@ -145,7 +145,8 @@ readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@"
 
 if which --all gnome-text-editor &> /dev/null  ;  then
 gnomeSetPrefs() {
-local file=~/.local/share/mime/packages/cfg-as-ini.xml
+local packDir=~/.local/share/mime/packages
+local file=${packDir}/cfg-as-ini.xml
 printf \
 '<?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
