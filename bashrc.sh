@@ -91,7 +91,7 @@ alias lahalt='ls -hAlt' # l - long, print details , t - sort by time , h - human
 #
 
 #
-
+complete -j -P '"%' -S '"' fg
 #
 
 #
