@@ -95,6 +95,7 @@ complete -j -P '"%' -S '"' fg
 #
 
 #
+complete -j -P '"%' -S '"' disown
 filesort() { sort --unique --output="$1" "$1" ; }
 
 #
