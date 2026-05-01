@@ -148,6 +148,7 @@ if which --all gnome-text-editor &> /dev/null  ;  then
 gnomeSetPrefs() {
 local packDir=~/.local/share/mime/packages
 local file=${packDir}/cfg-as-ini.xml
+( [[ -d ${packDir} ]] || mkdir -p ${packDir} )
 printf \
 '<?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
