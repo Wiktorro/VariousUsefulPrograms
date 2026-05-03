@@ -164,7 +164,7 @@ fi
 #
 
 if which --all keep-presence &> /dev/null ; then
-alias keepPres='keep-presence --seconds'
+alias keepPres='keep-presence --seconds 150'
 true
 fi
 #
