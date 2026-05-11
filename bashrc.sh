@@ -137,6 +137,9 @@ readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@"
 #
 
 #
+if which -a code &> /dev/null ; then
+true
+fi
 
 #
 
