@@ -192,6 +192,10 @@ fi
 if which --all rg &> /dev/null  ;  then
 true
 fi
+
+if which -a spd-say &> /dev/null  ;  then
+true
+fi
 #
 
 #
