@@ -195,6 +195,8 @@ fi
 
 if which -a spd-say &> /dev/null  ;  then
 true
+else
+beep() { printf '\a' ; echo -en "\007" ;}
 fi
 #
 
