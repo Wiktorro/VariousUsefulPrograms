@@ -145,6 +145,9 @@ fi
 
 #
 
+if which -a firefox &> /dev/null ; then
+true
+fi
 #
 
 if which --all gnome-text-editor &> /dev/null  ;  then
