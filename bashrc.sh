@@ -152,7 +152,8 @@ gnomeSetPrefs() {
 local packDir=~/.local/share/mime/packages
 local file=${packDir}/cfg-as-ini.xml
 ( [[ -d ${packDir} ]] || mkdir -p ${packDir} )
-[[ -f ${file} ]] || printf \
+ # reset file content unless already not empty
+[[ -s ${file} ]] || printf \
 '<?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
   <mime-type type="text/x-ini">
