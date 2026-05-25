@@ -99,7 +99,7 @@ complete -j -P '"%' -S '"' disown
 filesort() { sort --unique --output="$1" "$1" ; }
 alias trimSpaces="sed --regexp-extended --in-place 's-  +- -'"
 #
-
+alias sortinline="tr ' ' '\n' | sort | tr '\n' ' ' "
 titleSet() {
 echo -en "\033]0;$1\a"  ### like echo -en "\033]0;New title\a" ## better Use printf, echo isn't portable in the regard.  ,as in https://unix.stackexchange.com/q/70459
 } ##{ echo "[ $1 ]" }
