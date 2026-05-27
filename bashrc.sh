@@ -139,6 +139,7 @@ readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@"
 #
 if which -a code &> /dev/null ; then
 true
+complete -W "-a --add --add-mcp --category -d --diff --disable-chromium-sandbox --disable-extension --disable-extensions --disable-gpu --disable-lcd-text --enable-proposed-api --extensions-dir --force -g --goto -h --help --inspect-brk-extensions --inspect-extensions --install-extension --list-extensions --locale --locate-shell-integration-path --log -m --merge -n --new-window --pre-release --profile --prof-startup -r --remove --reuse-window -s --sessions --show-versions --status --sync --telemetry --transient --uninstall-extension --update-extensions --user-data-dir -v --verbose --version -w --wait" code
 fi
 
 #
