@@ -25,6 +25,7 @@
 	requireForce = true
 [core]
 	editor = nano -c
+	fileMode = false
 [completion]
 [credential]
 	komentarz = "ciekawe lini o .netrc pod https://stackoverflow.com/questions/6031214/git-how-to-use-netrc-file-on-windows-to-save-user-and-password "
