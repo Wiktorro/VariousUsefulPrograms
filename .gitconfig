@@ -24,6 +24,7 @@
 	komentarz  = "when changed to false , plain git clean will remove files without extra force flags"
 	requireForce = true
 [core]
+	autocrlf = input
 	editor = nano -c
 [completion]
 [credential]
