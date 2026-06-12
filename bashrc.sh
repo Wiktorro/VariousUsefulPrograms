@@ -151,6 +151,7 @@ fi
 
 if which -a firefox &> /dev/null ; then
 true
+alias firefoxpriv='firefox --private-window'
 fi
 #
 
