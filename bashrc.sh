@@ -150,6 +150,7 @@ fi
 #
 
 if which -a firefox &> /dev/null ; then
+alias firefoxsavemode='firefox --safe-mode'
 true
 fi
 #
