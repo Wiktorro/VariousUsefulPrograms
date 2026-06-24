@@ -136,6 +136,7 @@ highlight() {  ##  uname -n | highlight tek 2
 #
 
 datepretty() { date +%F_%R ; } # +%y-%b-%d_%R , dont confuse hour with date
+dateprettyRenamefile() { ;}
 #
 # adding '=*' to pattern would include '=' if provided to flag (as in --color=always), but rejected now as behavior on windows is problematic , doesnt match as intended # -- necessary fo differ from the patterns , zajete getflags przez /usr/bin/getflags, https://www.cyberciti.biz/faq/grep-regular-expressions/ # also concatenate to 1 line with paste -sd' ' 
 readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@" | sort --unique | tr '\n' ' ' ; }
