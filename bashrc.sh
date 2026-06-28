@@ -183,6 +183,9 @@ true
 fi
 #
 
+if which --all nmcli &> /dev/null ; then
+true
+fi
 #
 if which --all pcat &> /dev/null ; then
 true
