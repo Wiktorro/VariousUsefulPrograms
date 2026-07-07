@@ -132,7 +132,9 @@ highlight() {  ##  uname -n | highlight tek 2
 #
 
 #
-
+gtest() { ## wrapper for gtest flags completion ##  $1 for binary a
+$@
+}
 #
 
 datepretty() { date +%F_%R ; } # +%y-%b-%d_%R , dont confuse hour with date
@@ -174,6 +176,10 @@ update-mime-database ~/.local/share/mime
 }
 true
 complete -F _minimal -W "-h --help --help-all --help-gapplication -i --ignore-session -n --new-window -s --standalone --version" gnome-text-editor
+fi
+
+if which --all keep-presence &> /dev/null ; then
+true
 fi
 #
 
