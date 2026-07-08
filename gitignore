@@ -1,0 +1,5 @@
+lib/
+build/
+
+# good habit as to keep locally stored vars without commiting
+.env
