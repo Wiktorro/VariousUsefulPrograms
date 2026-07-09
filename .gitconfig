@@ -1,6 +1,11 @@
 [aaageneral]
 	comment = ""
 [advice]
+	branchDefault = "! \
+ 		git remote set-head origin -a > /dev/null \
+		&& git rev-parse --abbrev-ref origin/HEAD \
+		| sed 's#origin/##'" ## print the default branch of this repo, first command asks the remote if the default branch was changed
+	branchremove = "!git branch --remote -d ${1} ; git push origin --delete ${1} #"
 	skippedCherryPicks = false ## for messages like "hint: use --reapply-cherry-picks to include skipped commits" after git pull
 	detachedHead = true
 [alias]
