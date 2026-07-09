@@ -215,6 +215,10 @@ if which --all rg &> /dev/null  ;  then
 true
 fi
 
+if which --all rlwrap &> /dev/null  ;  then
+true
+fi
+
 if which -a spd-say &> /dev/null  ;  then
 # see https://stackoverflow.com/questions/1143386/in-a-bash-script-command-how-can-i-make-a-pc-beep-noise-or-play-a-sound-file
 beep() { printf '\a' ; echo -en "\007" ; [[ -n "$1" ]] && spd-say "$1" ; }
