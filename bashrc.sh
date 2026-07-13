@@ -127,6 +127,7 @@ highlight() {  ##  uname -n | highlight tek 2
   done
   sed -f <(printf '%s\n' "${patterns[@]}")
 } 
+alias grephighlight="grep --color=always -e^ -e"  ## from https://superuser.com/a/1537523   ## use like greph foo bar.txt
 #
 
 #
