@@ -1,3 +1,4 @@
+aptinstall () { apt install $@ ; }
 alias fullupdate='apt-get -qqy  update '
 #
 
