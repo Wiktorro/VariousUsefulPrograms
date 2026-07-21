@@ -186,6 +186,7 @@ fi
 
 if which --all keep-presence &> /dev/null ; then
 alias keepPres='keep-presence --seconds 150'
+complete -W "-c --circular -h --help -m --mode -p --pixels -r --random -s --seconds" keep-presence
 true
 fi
 #
