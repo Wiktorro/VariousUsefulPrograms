@@ -192,6 +192,9 @@ fi
 
 if which --all nmcli &> /dev/null ; then
 hotspotRun() { # https://computingforgeeks.com/create-wi-fi-hotspot-on-linux/
+
+local CON_NAME="nbwm"
+local IFNAME="wlp3s0" WIFIPASS=123
 }
 true
 fi
