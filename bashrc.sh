@@ -195,6 +195,11 @@ hotspotRun() { # https://computingforgeeks.com/create-wi-fi-hotspot-on-linux/
 
 local CON_NAME="nbwm"
 local IFNAME="wlp3s0" WIFIPASS=123
+
+if [[ "$1" == "show" ]] ; then
+nmcli connection show ${CON_NAME}
+return 0
+fi
 }
 true
 fi
