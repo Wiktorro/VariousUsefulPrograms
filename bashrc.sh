@@ -146,6 +146,9 @@ readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@"
 #
 
 #
+if which --all canberra-gtk-play &> /dev/null ; then
+true
+fi
 if which -a code &> /dev/null ; then
 true
 fi
@@ -227,6 +230,9 @@ fi
 #
 
 #
+if which --all xkill &> /dev/null  ;  then
+true
+fi
 # tool from https://stackoverflow.com/a/25620599 and https://gist.github.com/deryni/8aa8d0164f620a8dcb7e 
 # declare -A user_data=( [id]="101" [name]="Jan" [role]="admin" ); for key in "${!user_data[@]}"; do echo "$key => ${user_data[$key]}"; done
 declare -A tmpArr=( ["$HOME/worddiff.awk"]="https://gist.githubusercontent.com/deryni/8aa8d0164f620a8dcb7e/raw/06f2eed69a8f9df0e38882a2e6156e4e60bf4a98/worddiff.awk" ) # nie radzi sobie z ~
