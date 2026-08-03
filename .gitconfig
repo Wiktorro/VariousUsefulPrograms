@@ -9,6 +9,7 @@
 		&& git rev-parse --abbrev-ref origin/HEAD \
 		| sed 's#origin/##'" ## print the default branch of this repo, first command asks the remote if the default branch was changed
 	branchRemove = "!git branch --remote -d ${1} ; git push origin --delete ${1} #"
+	branchRemoveLast = branch -d @{-1}
 	configEditGlobal = !git config --global --edit
 	diffCurr = diff --ignore-cr-at-eol --unified=5 HEAD
 	diffPrev = diff --ignore-cr-at-eol --unified=5 HEAD^  ## showing to 5 lines on shared context ##  diff HEAD^ -M30% (aka --find-renames=30% , istnijees tez --find-copies=30% ) powinno uznawac za move / rename jesli co najmnije 30% wspolnej zawartosci
@@ -20,6 +21,7 @@
 #
 	diffSmall = "! git diff --ignore-cr-at-eol --word-diff=porcelain HEAD | awk -v red="$(tput setaf 1)" -v green="$(tput setaf 2)" -v reset="$(tput sgr0)" -f ~/worddiff.awk ## "
 	fetchMaster = fetch origin main
+	logCurrent = log -n1
 	log1line = log --oneline -n3
 	pushQuiet = "!git push -q --set-upstream $@ 2>&1 | sed -e 's/^remote: //' | grep . #"
 	stl = !git status --short --no-ahead-behind --show-stash && git log1line
