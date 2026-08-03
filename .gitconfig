@@ -15,6 +15,7 @@
 #
 	diffMinimal = "! git diff --ignore-cr-at-eol --word-diff-regex='([^[:alnum:]]|[^[:space:]])' --word-diff=porcelain HEAD | awk -v red="$(tput setaf 1)" -v green="$(tput setaf 2)" -v reset="$(tput sgr0)" -f ~/worddiff.awk ##"
 	resetPrev = reset --quiet --hard HEAD^
+	resetPrevRef = reset --quiet --hard HEAD@{1}
 	resetCurr = reset --quiet --hard HEAD
 
 #
