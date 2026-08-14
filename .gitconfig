@@ -12,6 +12,7 @@
 	branchRemoveLast = branch -d @{-1}
 	checkoutPrev = checkout HEAD^
 	configEditGlobal = !git config --global --edit
+	configEditLocal = config --edit --local
 	diffCurr = diff --ignore-cr-at-eol --unified=5 HEAD
 	diffPrev = diff --ignore-cr-at-eol --unified=5 HEAD^  ## showing to 5 lines on shared context ##  diff HEAD^ -M30% (aka --find-renames=30% , istnijees tez --find-copies=30% ) powinno uznawac za move / rename jesli co najmnije 30% wspolnej zawartosci
 #
