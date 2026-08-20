@@ -196,6 +196,10 @@ fi
 if which --all nmcli &> /dev/null ; then
 hotspotRun() { # https://computingforgeeks.com/create-wi-fi-hotspot-on-linux/
 
+if [[ "$#" == "1" ]] ; then 
+echo "args $# : $@"
+fi
+
 local CON_NAME="nbwm"
 local IFNAME="wlp3s0" WIFIPASS=123
 
