@@ -161,6 +161,9 @@ if which -a firefox &> /dev/null ; then
 true
 alias firefoxpriv='firefox --private-window'
 fi
+if which --all git &> /dev/null ; then
+true
+fi
 #
 
 if which --all gnome-text-editor &> /dev/null  ;  then
