@@ -1,7 +1,9 @@
+if which --all apt &> /dev/null  ;  then
 aptinstall () { apt install $@ ; }
 alias fullupdate='apt-get -qqy  update '
 #
 alias kernelUpgrade='apt-get dist-upgrade --yes '
+fi
 export ME=me
 #
 if which --all fwupdmgr &> /dev/null  ;  then
