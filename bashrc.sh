@@ -148,6 +148,7 @@ readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@"
 #
 if which --all canberra-gtk-play &> /dev/null ; then
 true
+alias bell=' canberra-gtk-play --file /usr/share/sounds/Yaru/stereo/bell.oga'
 fi
 if which -a code &> /dev/null ; then
 true
