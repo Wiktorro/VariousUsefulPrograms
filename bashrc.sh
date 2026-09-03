@@ -153,6 +153,9 @@ if which -a code &> /dev/null ; then
 true
 fi
 
+if which -a coredumpctl &> /dev/null ; then
+true
+fi
 #
 
 #
