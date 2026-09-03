@@ -163,6 +163,7 @@ alias firefoxpriv='firefox --private-window'
 fi
 if which --all git &> /dev/null ; then
 true
+switchtargetOldest() { :;}
 fi
 #
 
