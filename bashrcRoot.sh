@@ -1,7 +1,7 @@
 aptinstall () { apt install $@ ; }
 alias fullupdate='apt-get -qqy  update '
 #
-alias kernelUpgrade='apt-get dist-upgrade --yes '
+alias kernelUpgrade='echo "upgrade kernel, current: " && lsb_release -a && apt-get dist-upgrade --yes '
 export ME=me
 #
 if which --all fwupdmgr &> /dev/null  ;  then
