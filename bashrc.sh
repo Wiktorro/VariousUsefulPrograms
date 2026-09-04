@@ -155,6 +155,9 @@ fi
 
 #
 
+if which -a dbeaver-ce &> /dev/null ; then
+true
+fi
 #
 
 if which -a firefox &> /dev/null ; then
