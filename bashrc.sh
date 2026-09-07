@@ -147,6 +147,7 @@ readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@"
 
 #
 if which --all canberra-gtk-play &> /dev/null ; then
+complete -F _minimal -W "-c --cache-control -d --description --display -f --file -h --help --help-all --help-gtk -i --id -l --loop --property -v -V --version --volume"  canberra-gtk-play
 true
 fi
 if which -a code &> /dev/null ; then
