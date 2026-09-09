@@ -4,6 +4,9 @@ alias fullupdate='apt-get -qqy  update '
 alias kernelUpgrade='apt-get dist-upgrade --yes '
 export ME=me
 #
+if which --all coredumpctl &> /dev/null  ;  then
+true
+fi
 if which --all fwupdmgr &> /dev/null  ;  then
 true
 fi
