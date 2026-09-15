@@ -1,5 +1,5 @@
 if which --all apt &> /dev/null  ;  then
-aptinstall () { apt install $@ ; }
+aptinstall () { apt install $@ || apt-get install $@; }
 alias fullupdate='apt-get -qqy  update '
 #
 alias kernelUpgrade='apt-get dist-upgrade --yes '
