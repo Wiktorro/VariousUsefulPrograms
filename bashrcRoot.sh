@@ -13,6 +13,7 @@ if which --all fwupdmgr &> /dev/null  ;  then
 true
 fi
 if which --all journalctl &> /dev/null  ;  then
+alias journalctlvacuumweek='journalctl --vacuum-time 7d'
 true
 fi
 
