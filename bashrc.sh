@@ -210,6 +210,10 @@ hotspotRun() { # https://computingforgeeks.com/create-wi-fi-hotspot-on-linux/
 if [[ "$#" == "1" ]] ; then 
 echo "args $# : $@"
 fi
+if [[ "$1" == "checkForwarding" ]] ; then
+iw list | grep -iA 10 "valid interface combinations"
+return 0
+fi
 
 local CON_NAME="nbwm"
 local IFNAME="wlp3s0" WIFIPASS=123
