@@ -218,7 +218,7 @@ if [[ "$1" == "show" ]] ; then
 nmcli connection show ${CON_NAME}
 return 0
 fi
-}
+} && complete -W "show" hotspotRun
 true
 fi
 #
