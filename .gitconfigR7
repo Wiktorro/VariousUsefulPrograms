@@ -1,0 +1,3 @@
+[push] # see https://git-scm.com/docs/git-push#Documentation/git-push.txt-pushpushOption
+#
+	pushOption = ept.skip
