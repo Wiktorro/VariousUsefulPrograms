@@ -27,6 +27,7 @@
 	logCurrent = log -n1
 	log1line = log --oneline -n3
 	pushQuiet = "!git push -q --set-upstream $@ 2>&1 | sed -e 's/^remote: //' | grep . #"
+	stashPrint = stash show -p
 	stl = !git status --short --no-ahead-behind --show-stash && git log1line
 
 
