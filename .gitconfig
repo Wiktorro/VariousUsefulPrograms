@@ -56,7 +56,7 @@
        output = compact
 [gc]
        auto = 6000 ## by default 6700
-
+[grep]
 #
 [help]
 	autocorrect = 30  ## 3 seconds before correction runs
