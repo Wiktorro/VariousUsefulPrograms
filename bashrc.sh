@@ -98,13 +98,13 @@ alias lahalt='ls -hAlt' # l - long, print details , t - sort by time , h - human
 #
 complete -j -P '"%' -S '"' fg
 #
-
+complete -A stopped -P '"%' -S '"' bg
 #
 complete -j -P '"%' -S '"' disown
 filesort() { sort --unique --output="$1" "$1" ; }
 alias trimSpaces="sed --regexp-extended --in-place 's-  +- -'"
 #
-
+alias sortinline="tr ' ' '\n' | sort | tr '\n' ' ' "
 titleSet() {
 echo -en "\033]0;$1\a"  ### like echo -en "\033]0;New title\a" ## better Use printf, echo isn't portable in the regard.  ,as in https://unix.stackexchange.com/q/70459
 } ##{ echo "[ $1 ]" }
@@ -139,7 +139,7 @@ $@
 #
 
 datepretty() { date +%F_%R ; } # +%y-%b-%d_%R , dont confuse hour with date
-dateprettyRenamefile() { mv -v "$1" "$2$(datepretty)-$1" ;}
+dateprettyRenamefile() { mv -v "$1" "$2$(datepretty $3)-$1" ;}
 #
 # adding '=*' to pattern would include '=' if provided to flag (as in --color=always), but rejected now as behavior on windows is problematic , doesnt match as intended # -- necessary fo differ from the patterns , zajete getflags przez /usr/bin/getflags, https://www.cyberciti.biz/faq/grep-regular-expressions/ # also concatenate to 1 line with paste -sd' ' 
 readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@" | sort --unique | tr '\n' ' ' ; }
@@ -147,19 +147,29 @@ readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@"
 
 #
 if which --all canberra-gtk-play &> /dev/null ; then
+complete -F _minimal -W "-c --cache-control -d --description --display -f --file -h --help --help-all --help-gtk -i --id -l --loop --property -v -V --version --volume"  canberra-gtk-play
 true
 fi
 if which -a code &> /dev/null ; then
 true
 fi
 
+if which -a coredumpctl &> /dev/null ; then
+true
+fi
 #
 
+if which -a dbeaver-ce &> /dev/null ; then
+true
+fi
 #
 
 if which -a firefox &> /dev/null ; then
 true
 alias firefoxpriv='firefox --private-window'
+fi
+if which --all git &> /dev/null ; then
+true
 fi
 #
 
@@ -189,6 +199,7 @@ fi
 
 if which --all keep-presence &> /dev/null ; then
 alias keepPres='keep-presence --seconds 150'
+complete -W "-c --circular -h --help -m --mode -p --pixels -r --random -s --seconds" keep-presence
 true
 fi
 #
@@ -196,8 +207,23 @@ fi
 if which --all nmcli &> /dev/null ; then
 hotspotRun() { # https://computingforgeeks.com/create-wi-fi-hotspot-on-linux/
 
+if [[ "$#" == "1" ]] ; then 
+echo "args $# : $@"
+fi
+
 local CON_NAME="nbwm"
 local IFNAME="wlp3s0" WIFIPASS=123
+
+if [[ "$1" == "show" ]] ; then
+nmcli connection show ${CON_NAME}
+return 0
+fi
+nmcli con modify ${CON_NAME} \
+    802-11-wireless.mode ap \
+    802-11-wireless.band bg \
+    ipv4.method shared \
+    wifi-sec.key-mgmt wpa-psk \
+    wifi-sec.psk ${WIFIPASS}
 }
 true
 fi
@@ -219,6 +245,10 @@ true
 fi
 
 if which --all rg &> /dev/null  ;  then
+true
+fi
+
+if which --all rlwrap &> /dev/null  ;  then
 true
 fi
 
