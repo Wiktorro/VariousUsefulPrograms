@@ -163,6 +163,7 @@ if which -a dbeaver-ce &> /dev/null ; then
 true
 fi
 #
+complete -W "--failed -h --help --label -p --per-thread --pid -t --timestamp --utc -x " exitsnoop-bpfcc
 
 if which -a firefox &> /dev/null ; then
 true
