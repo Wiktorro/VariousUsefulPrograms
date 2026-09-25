@@ -161,6 +161,7 @@ fi
 
 if which -a dbeaver-ce &> /dev/null ; then
 true
+dbeaver-ce() {  dbeaver-ce $(realpath $@ ) ;} # has problms with relative, poss workspace aspect
 fi
 #
 
