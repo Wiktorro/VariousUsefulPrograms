@@ -261,6 +261,7 @@ fi
 
 #
 if which --all xkill &> /dev/null  ;  then
+complete -W "-all -button -display -frame -id -option -version" xkill
 true
 fi
 # tool from https://stackoverflow.com/a/25620599 and https://gist.github.com/deryni/8aa8d0164f620a8dcb7e 
