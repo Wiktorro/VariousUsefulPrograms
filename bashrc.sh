@@ -160,6 +160,7 @@ fi
 #
 
 if which -a dbeaver-ce &> /dev/null ; then
+tmp="$HOME/dbeaver.sh" ;
 true
 fi
 #
