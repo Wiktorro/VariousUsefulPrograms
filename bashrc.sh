@@ -167,6 +167,8 @@ fi
 if which -a firefox &> /dev/null ; then
 true
 alias firefoxpriv='firefox --private-window'
+firefoxPoliciesSet() {
+}
 fi
 if which --all git &> /dev/null ; then
 true
