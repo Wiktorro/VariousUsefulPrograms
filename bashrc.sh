@@ -175,6 +175,7 @@ fi
 
 if which --all gnome-text-editor &> /dev/null  ;  then
 gnomeSetPrefs() {
+local confDir=${1} # overridable location on call, to use from root for instance
 local packDir=~/.local/share/mime/packages
 local file=${packDir}/cfg-as-ini.xml
 ( [[ -d ${packDir} ]] || mkdir -p ${packDir} )
