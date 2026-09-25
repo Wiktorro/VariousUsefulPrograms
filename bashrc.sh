@@ -45,6 +45,7 @@ alias vs='"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7
 
 #
 
+envGet(  { set | grep $@ ;} # Way to read content of vars , $1 like IFS ,  prepend with ^ to limit to searching names and only from beginning- impractitcal....
 #
 
 #
