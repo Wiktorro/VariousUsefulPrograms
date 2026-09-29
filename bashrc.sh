@@ -207,6 +207,10 @@ fi
 if which --all nmcli &> /dev/null ; then
 hotspotRun() { # https://computingforgeeks.com/create-wi-fi-hotspot-on-linux/
 
+while [ "$#" -gt 0 ] ;do
+    case "$1" in
+    esac; shift
+done  
 if [[ "$#" == "1" ]] ; then 
 echo "args $# : $@"
 fi
