@@ -144,6 +144,7 @@ dateprettyRenamefile() { mv -v "$1" "$2$(datepretty $3)-$1" ;}
 # adding '=*' to pattern would include '=' if provided to flag (as in --color=always), but rejected now as behavior on windows is problematic , doesnt match as intended # -- necessary fo differ from the patterns , zajete getflags przez /usr/bin/getflags, https://www.cyberciti.biz/faq/grep-regular-expressions/ # also concatenate to 1 line with paste -sd' ' 
 readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@" | sort --unique | tr '\n' ' ' ; }
 #
+readFlagss() { $@ --help 2>&1 | readFlags ; }
 
 #
 if which --all canberra-gtk-play &> /dev/null ; then
