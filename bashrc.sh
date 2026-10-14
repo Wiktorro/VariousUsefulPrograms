@@ -263,7 +263,7 @@ beep() { printf '\a' ; echo -en "\007" ; [[ -n "$1" ]] && spd-say "$1" ; }
 true
 fi
 #
-
+getIP() { getent hosts $@;}
 #
 if which --all xkill &> /dev/null  ;  then
 true
