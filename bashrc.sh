@@ -102,6 +102,8 @@ complete -A stopped -P '"%' -S '"' bg
 #
 complete -j -P '"%' -S '"' disown
 filesort() { sort --unique --output="$1" "$1" ; }
+# alias historysort='filesort $HISTFILE '
+
 alias trimSpaces="sed --regexp-extended --in-place 's-  +- -'"
 #
 alias sortinline="tr ' ' '\n' | sort | tr '\n' ' ' "
