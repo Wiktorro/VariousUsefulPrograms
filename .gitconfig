@@ -4,6 +4,7 @@
 	skippedCherryPicks = false ## for messages like "hint: use --reapply-cherry-picks to include skipped commits" after git pull
 	detachedHead = true
 [alias]
+	branchCurr = branch --show-current
 	branchDefault = "! \
  		git remote set-head origin -a > /dev/null \
 		&& git rev-parse --abbrev-ref origin/HEAD \
