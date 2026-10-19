@@ -62,6 +62,7 @@
 #
 [help]
 	autocorrect = 30  ## 3 seconds before correction runs
+[merge]
 [protocol]
 	version = 2
 [pull]
