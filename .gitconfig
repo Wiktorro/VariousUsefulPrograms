@@ -42,6 +42,7 @@
 [core]
 	autocrlf = input
 	editor = nano -c
+	excludesFile = gitignore
 	fileMode = false
 [completion]
 [credential]
