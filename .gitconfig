@@ -12,6 +12,7 @@
 	branchRemove = "!git branch --remote -d ${1} ; git push origin --delete ${1} #"
 	branchRemoveLast = branch -d @{-1}
 	checkoutPrev = checkout HEAD^
+	cleann = clean -fdx
 	configEditGlobal = !git config --global --edit
 	configEditLocal = config --edit --local
 	diffCurr = diff --ignore-cr-at-eol --unified=5 HEAD
