@@ -54,6 +54,7 @@
 	tool = meld # or maybe vs code
 	context = 4
 [fetch]
+	parallel = 4
        pruneTags = true
        output = compact
 [gc]
