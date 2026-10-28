@@ -234,6 +234,8 @@ nmcli con modify ${CON_NAME} \
 }
 true
 fi
+
+export NVM_DIR="$HOME/.nvm"
 #
 if which --all pcat &> /dev/null ; then
 true
