@@ -194,7 +194,7 @@ update-mime-database ~/.local/share/mime
 true
 complete -F _minimal -W "-h --help --help-all --help-gapplication -i --ignore-session -n --new-window -s --standalone --version" gnome-text-editor
 fi
-
+jarUnpack() { jar xf $1 ;}
 if which --all keep-presence &> /dev/null ; then
 true
 fi
