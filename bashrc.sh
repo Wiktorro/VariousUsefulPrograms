@@ -82,6 +82,7 @@ historydeletelastfromto() { (($1)) && history -d $1-${2} ; }
 #
 
 alias cdback='cd "${OLDPWD}" ' ..=" cd .." ...=" cd ../.." ....=" cd ../../.." # mind the "" if path has spaces
+alias cdb=cdback
 #
 
 #
