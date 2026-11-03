@@ -26,7 +26,8 @@ alias vs='"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7
 #
 
 #
-
+export YELLOW='\033[1;33m' \
+    NC='\033[0m' # No Color
 #
 
 #
