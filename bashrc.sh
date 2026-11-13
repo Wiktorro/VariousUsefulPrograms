@@ -26,7 +26,8 @@ alias vs='"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7
 #
 
 #
-
+export YELLOW='\033[1;33m' \
+    NC='\033[0m' # No Color
 #
 
 #
@@ -75,7 +76,7 @@ alias historylast=' history 11 '
 alias historyreload=' history -c ; history -r' # clears messy hist from terminal, reads fresh from default histfile
 alias historydeletelast=' history -d -1 ' # supported also -d start-end, from X till end like :: -d 144--1
 alias historydeletelastprev=' history -d -2 '
-historydeletelastfromto() { (($1)) && history -d $1-{2} ; }
+historydeletelastfromto() { (($1)) && history -d $1-${2} ; }
 
 #
 
@@ -102,6 +103,8 @@ complete -A stopped -P '"%' -S '"' bg
 #
 complete -j -P '"%' -S '"' disown
 filesort() { sort --unique --output="$1" "$1" ; }
+# alias historysort='filesort $HISTFILE '
+
 alias trimSpaces="sed --regexp-extended --in-place 's-  +- -'"
 #
 alias sortinline="tr ' ' '\n' | sort | tr '\n' ' ' "
@@ -144,8 +147,10 @@ dateprettyRenamefile() { mv -v "$1" "$2$(datepretty $3)-$1" ;}
 # adding '=*' to pattern would include '=' if provided to flag (as in --color=always), but rejected now as behavior on windows is problematic , doesnt match as intended # -- necessary fo differ from the patterns , zajete getflags przez /usr/bin/getflags, https://www.cyberciti.biz/faq/grep-regular-expressions/ # also concatenate to 1 line with paste -sd' ' 
 readFlags() { grep --only-matching --extended-regexp -- '\B-+[-a-zA-Z0-9]+' "$@" | sort --unique | tr '\n' ' ' ; }
 #
+readFlagss() { $@ --help 2>&1 | readFlags ; }
 
 #
+readFlagsss() { echo "complete -W '$( $@ --help 2>&1 | readFlags )' $1" ; }
 if which --all canberra-gtk-play &> /dev/null ; then
 complete -F _minimal -W "-c --cache-control -d --description --display -f --file -h --help --help-all --help-gtk -i --id -l --loop --property -v -V --version --volume"  canberra-gtk-play
 true
@@ -207,8 +212,16 @@ fi
 if which --all nmcli &> /dev/null ; then
 hotspotRun() { # https://computingforgeeks.com/create-wi-fi-hotspot-on-linux/
 
+while [ "$#" -gt 0 ] ;do
+    case "$1" in
+    esac; shift
+done  
 if [[ "$#" == "1" ]] ; then 
 echo "args $# : $@"
+fi
+if [[ "$1" == "checkForwarding" ]] ; then
+iw list | grep -iA 10 "valid interface combinations"
+return 0
 fi
 
 local CON_NAME="nbwm"
@@ -260,6 +273,9 @@ fi
 #
 
 #
+if which --all xkill &> /dev/null  ;  then
+true
+fi
 # tool from https://stackoverflow.com/a/25620599 and https://gist.github.com/deryni/8aa8d0164f620a8dcb7e 
 # declare -A user_data=( [id]="101" [name]="Jan" [role]="admin" ); for key in "${!user_data[@]}"; do echo "$key => ${user_data[$key]}"; done
 declare -A tmpArr=( ["$HOME/worddiff.awk"]="https://gist.githubusercontent.com/deryni/8aa8d0164f620a8dcb7e/raw/06f2eed69a8f9df0e38882a2e6156e4e60bf4a98/worddiff.awk" ) # nie radzi sobie z ~
