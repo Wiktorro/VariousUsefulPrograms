@@ -6,3 +6,5 @@ set pagination off
 set print array on
 # RTTI polymorphic analysis
 set print object on
+# mute LWP lines
+set print thread-events off
