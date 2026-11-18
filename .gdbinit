@@ -8,3 +8,7 @@ set print array on
 set print object on
 # mute LWP lines
 set print thread-events off
+# Remap build-time prefix /opt/source to the actual workspace location.
+# Fixes "No such file or directory" for binaries and sources in coredumps
+# built on the build server where SRCROOT=/opt/source.
+set substitute-path /opt/source /home/user/proj
