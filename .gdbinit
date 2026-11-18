@@ -8,3 +8,5 @@ set print array on
 set print object on
 # mute LWP lines
 set print thread-events off
+# cleaner virtual obj print
+set print vtbl on
