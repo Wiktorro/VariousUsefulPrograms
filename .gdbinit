@@ -6,5 +6,7 @@ set pagination off
 set print array on
 # RTTI polymorphic analysis
 set print object on
+# add them to dispay of class objs 
+set print static-members on
 # mute LWP lines
 set print thread-events off
