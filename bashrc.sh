@@ -251,6 +251,7 @@ fi
 
 if which --all ping &> /dev/null  ;  then
 true
+alias ping5='ping -c 5 ' # default count for linux, windows uses -n , but on windows -c is not supported, so use -n instead, also for consistency with other commands like ping6, see https://stackoverflow.com/a/76741707
 fi
 
 if which --all python &> /dev/null  ;  then
