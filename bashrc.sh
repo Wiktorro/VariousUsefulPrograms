@@ -166,6 +166,7 @@ fi
 
 if which -a dbeaver-ce &> /dev/null ; then
 true
+dbeaver-ce completion > ${tmp}
 fi
 #
 
