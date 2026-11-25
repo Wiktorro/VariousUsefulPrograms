@@ -165,6 +165,7 @@ fi
 #
 
 if which -a dbeaver-ce &> /dev/null ; then
+tmp=$SHOME/dbeaver.sh
 true
 fi
 #
