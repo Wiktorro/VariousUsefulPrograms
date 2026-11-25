@@ -198,6 +198,8 @@ complete -F _minimal -W "-h --help --help-all --help-gapplication -i --ignore-se
 fi
 
 if which --all keep-presence &> /dev/null ; then
+numlockKeepup(){ #gsett
+}
 true
 fi
 #
