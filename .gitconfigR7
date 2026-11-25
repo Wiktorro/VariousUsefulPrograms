@@ -1,3 +1,3 @@
 [push] # see https://git-scm.com/docs/git-push#Documentation/git-push.txt-pushpushOption
-#
+	# ; ept.skip - to skip EPT reporting for this push ; ept.disableUser - to disable user from EPT reporting ; ept.enableUser - to enable user to EPT reporting ; ept.setLogin=your_valid_ept_login - to set your current, valid EPT login mapping ; ept.deleteLogin - to delete your current login mapping
 	pushOption = ept.skip
