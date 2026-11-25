@@ -231,12 +231,14 @@ if [[ "$1" == "show" ]] ; then
 nmcli connection show ${CON_NAME}
 return 0
 fi
+if ! nmcli connection show ${CON_NAME} ; then
 nmcli con modify ${CON_NAME} \
     802-11-wireless.mode ap \
     802-11-wireless.band bg \
     ipv4.method shared \
     wifi-sec.key-mgmt wpa-psk \
     wifi-sec.psk ${WIFIPASS}
+fi
 }
 true
 fi
