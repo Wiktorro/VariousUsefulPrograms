@@ -214,6 +214,8 @@ hotspotRun() { # https://computingforgeeks.com/create-wi-fi-hotspot-on-linux/
 
 while [ "$#" -gt 0 ] ;do
     case "$1" in
+    restart)
+        nmcli con down ${CON_NAME};;
     esac; shift
 done  
 if [[ "$#" == "1" ]] ; then 
