@@ -250,6 +250,7 @@ true
 fi
 
 if which --all ping &> /dev/null  ;  then
+alias ping5='ping -n 5 ' # default count for windows, linux uses -c , but on windows -c is not supported, so use -n instead, also for consistency with other commands like ping6, see https://stackoverflow.com/a/76741707
 true
 fi
 
