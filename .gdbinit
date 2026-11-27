@@ -4,6 +4,8 @@ set confirm off
 set debuginfod enabled off
 # dont prompt to continue printing long logs
 set pagination off
+# hide var memory addresses
+set print address off
 # Tablice drukuja sie pionowo, kazdy element w nowej linii
 set print array on
 # 2nd way for arr vertical, indexed display
